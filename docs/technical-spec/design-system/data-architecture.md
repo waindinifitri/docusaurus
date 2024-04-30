@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Design System
+# Data Architecture
 
 Documents are **groups of pages** connected through:
 

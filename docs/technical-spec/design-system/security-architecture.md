@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Deployment and Integration
+# Security Architecture
 
 Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 

@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Innovatech Solution Dept!',
-  tagline: 'your future solution technolgy services',
+  title: 'Innovatech Solution Dept Documentation!',
+  tagline: 'welcoming you to your future solution technolgy services',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -131,3 +131,17 @@ const config: Config = {
 };
 
 export default config;
+
+// module.exports = {
+//   plugins: [
+//     [
+//       '@docusaurus/plugin-content-docs-search',
+//       {
+//         // Algolia DocSearch options
+//         apiKey: '06bb62575fa6bed4c5f3e79b1a5bcf8e',
+//         // indexName: 'YOUR_ALGOLIA_INDEX_NAME',
+//         appId: 'Z3D4K1KSUG',
+//       },
+//     ],
+//   ],
+// };

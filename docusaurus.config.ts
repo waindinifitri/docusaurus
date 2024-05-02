@@ -1,6 +1,8 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+// type CustomPreset = [string, Preset.Options | Preset.ThemeConfig];
 
 const config: Config = {
   title: 'Innovatech Solution Dept Documentation!',
@@ -50,8 +52,17 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-      } satisfies Preset.Options,
+      } as Preset.Options,
     ],
+    // [
+    //   '@docusaurus/plugin-content-docs-search',
+    //   {
+    //     // Algolia DocSearch options
+    //     apiKey: '4cb4a7e98d6a5dfced2b824cbb34cd83',
+    //     // indexName: 'YOUR_ALGOLIA_INDEX_NAME',
+    //     appId: 'Z3D4K1KSUG',
+    //   },
+    // ],
   ],
 
   themeConfig: {
@@ -61,7 +72,7 @@ const config: Config = {
       title: 'Innovatech Solution',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/digital-tech-icon-technologies-illustration-sign-information-symbol-data-center-logo-vector.jpg',
       },
       items: [
         {
@@ -70,7 +81,7 @@ const config: Config = {
           position: 'left',
           label: 'Technolgy',
         },
-        {to: '/blog', label: 'Services', position: 'left'},
+        { to: '/blog', label: 'Services', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -127,21 +138,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  } satisfies Preset.ThemeConfig,
+  } as Preset.ThemeConfig,
 };
 
 export default config;
-
-// module.exports = {
-//   plugins: [
-//     [
-//       '@docusaurus/plugin-content-docs-search',
-//       {
-//         // Algolia DocSearch options
-//         apiKey: '06bb62575fa6bed4c5f3e79b1a5bcf8e',
-//         // indexName: 'YOUR_ALGOLIA_INDEX_NAME',
-//         appId: 'Z3D4K1KSUG',
-//       },
-//     ],
-//   ],
-// };

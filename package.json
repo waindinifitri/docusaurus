@@ -16,6 +16,7 @@
     "dev": "docusaurus start"
   },
   "dependencies": {
+    "@cmfcmf/docusaurus-search-local": "^1.1.0",
     "@docusaurus/core": "3.2.0",
     "@docusaurus/preset-classic": "3.2.0",
     "@docusaurus/theme-search-algolia": "^3.2.1",
@@ -47,5 +48,9 @@
   "engines": {
     "node": ">=18.0"
   },
-  "description": "Docusaurus example project (classic-typescript template)"
+  "description": "Docusaurus example project (classic-typescript template)",
+  "main": "index.js",
+  "repository": "https://github.com/waindinifitri/docusaurus.git",
+  "author": "INTCOMP190\\Waindini <waindini@nalysa.com>",
+  "license": "MIT"
 }

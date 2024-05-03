@@ -40,14 +40,19 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@cmfcmf/docusaurus-search-local',
+      {
+        indexDocs: true, 
+        indexBlog: true,
+        indexPages: true,
+      },
+    ],
+  ],
+
   themeConfig: {
-    algolia: {
-      appId: 'Z3D4K1KSUG',
-      apiKey: '4cb4a7e98d6a5dfced2b824cbb34cd83',
-      indexName: 'dev_prisma',
-      // contextualSearch: true,
-    },
-    themes: ['@docusaurus/theme-search-algolia'],
+    // themes: ['@cmfcmf/docusaurus-search-local'],
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Prisma Enterprise',

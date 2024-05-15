@@ -47,3 +47,4 @@ sidebar_position: 1
 | Applicant Portal Questionnaire | The Applicant Portal Questionnaire streamlines the background check process by allowing candidates to submit information and required documents online. Candidates receive an email invitation with a link to access the Prisma Application for submission. |
 | Invoicing Module | The invoicing module is designed to provide price list information on each client for Sales and Accounting, automatic KAE Daily in Prisma for EBS, and automatic invoicing for Accounting to Client |
 | Queueing system | This system will allow the QC team members to choose Atomic Checks in Prisma by themselves. This feature will be available in the QC team members' account |
+| Asset Management | Asset management refers to the systematic process of developing, operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner. It involves managing a client's investments by a professional firm or individual. |

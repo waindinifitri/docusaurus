@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Prisma Enterprise Documentation',
+  title: 'Prisma Enterprise Knowledge Base',
   tagline: 'welcoming you to your future solution technology services',
   favicon: 'img/favicon.ico',
 

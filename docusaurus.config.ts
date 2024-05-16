@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Prisma Enterprise Knowledge Base',
-  tagline: 'welcoming you to your future solution technology services',
+  tagline: 'Highest Level Business Specifications',
   favicon: 'img/favicon.ico',
 
   url: 'https://your-docusaurus-site.example.com',
@@ -52,13 +52,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // themes: ['@cmfcmf/docusaurus-search-local'],
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Prisma Enterprise',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/digital-tech-icon-technologies-illustration-sign-information-symbol-data-center-logo-vector.jpg',
+        src: 'img/logo-prisma-pyramid-red.png',
       },
       items: [
         {
@@ -70,7 +69,7 @@ const config: Config = {
         { to: '/blog', label: 'Services', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          label: 'Prisma',
           position: 'right',
         },
       ],
@@ -79,46 +78,55 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Integration',
           items: [
             {
-              label: 'Services',
+              label: 'Knowme',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Minerva',
+              to: '/docs/intro',
+            },
+            {
+              label: 'Aranea',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Admin Gate Application',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
+              label: 'System Administrator',
               href: 'https://discordapp.com/invite/docusaurus',
             },
             {
-              label: 'Twitter',
+              label: 'Business Administartor',
+              href: 'https://twitter.com/docusaurus',
+            },
+            
+          ],
+        },
+        {
+          title: 'Stakeholder Gate',
+          items: [
+            {
+              label: 'Back-office',
+              href: 'https://twitter.com/docusaurus',
+            },
+            {
+              label: 'Client Users',
+              href: 'https://twitter.com/docusaurus',
+            },
+            {
+              label: 'Applicant/Vendor/Freelance',
               href: 'https://twitter.com/docusaurus',
             },
           ],
         },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Services',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Prisma Enterprise All Rights Reserved`,
     },
     prism: {
       theme: prismThemes.github,

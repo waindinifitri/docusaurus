@@ -4,14 +4,15 @@ import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  // Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  img: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: "Secure",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    img: "img/secure.png",
     description: (
       <>
         Our security application covers various aspects such as data protection,
@@ -22,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Compliance",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    img: "img/compliance.png",
     description: (
       <>
         Ensuring that the organization follows laws and regulations relevant to
@@ -34,7 +35,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Multitenancy",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    img: "img/multitenancy.png",
     description: (
       <>
         Our Multitenancy terms is enabling franchisees and tenants to tailor
@@ -44,11 +45,18 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, img, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* <Svg className={styles.featureSvg} role="img" /> */}
+        <img
+          src={img}
+          className={styles.featureImg}
+          alt={title}
+          style={{ width: "20%", height: "auto" }}
+        />{" "}
+        {/* Use <img> tag to display image */}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

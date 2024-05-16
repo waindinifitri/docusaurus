@@ -49,14 +49,12 @@ function Feature({ title, img, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        {/* <Svg className={styles.featureSvg} role="img" /> */}
         <img
           src={img}
           className={styles.featureImg}
           alt={title}
           style={{ width: "20%", height: "auto" }}
         />{" "}
-        {/* Use <img> tag to display image */}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

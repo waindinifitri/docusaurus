@@ -88,10 +88,10 @@ const config: Config = {
               label: 'Minerva',
               to: '/docs/intro',
             },
-            {
-              label: 'Aranea',
-              to: '/docs/intro',
-            },
+            // {
+            //   label: 'Aranea',
+            //   to: '/docs/intro',
+            // },
           ],
         },
         {
@@ -119,10 +119,10 @@ const config: Config = {
               label: 'Client Users',
               href: 'https://twitter.com/docusaurus',
             },
-            {
-              label: 'Applicant/Vendor/Freelance',
-              href: 'https://twitter.com/docusaurus',
-            },
+            // {
+            //   label: 'Applicant/Vendor/Freelance',
+            //   href: 'https://twitter.com/docusaurus',
+            // },
           ],
         },
       ],

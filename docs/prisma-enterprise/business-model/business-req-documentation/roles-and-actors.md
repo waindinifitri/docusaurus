@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Business Roles and Actors
+# Business Requirement Documents
 
 | Module Code | Module Name                                                                     | Module Category           |
 | ----------- | ------------------------------------------------------------------------------- | ------------------------- |

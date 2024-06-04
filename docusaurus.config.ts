@@ -7,11 +7,11 @@ const config: Config = {
   tagline: 'Highest Level Business Specifications',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'http://dev.prisma.lab1:3000',
   baseUrl: '/',
 
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  organizationName: 'Integrity Asia',
+  projectName: 'prisma-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

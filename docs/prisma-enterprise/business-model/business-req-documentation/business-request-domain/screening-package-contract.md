@@ -6,7 +6,7 @@ This diagram focuses on the publication and management of screening reports with
 
 ## Key Tables and Their Purpose
 
-### Screening Request (`int_screeningrequest`)
+<!-- ### Screening Request (`int_screeningrequest`)
 
 - **Purpose**: This table holds information about all screening requests received by the company.
 - **Key Details**:
@@ -60,4 +60,4 @@ This diagram focuses on the publication and management of screening reports with
 3. **Event Logging**:
    - Every action related to the report's publication is logged in the `int_screeningpublisheventhistory` table. For example, if an error occurs during publication, it is recorded along with the date and the user who performed the action.
 
-"""
+""" -->

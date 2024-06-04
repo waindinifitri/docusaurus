@@ -4,7 +4,7 @@ This diagram focuses on the publication and management of screening reports with
 
 ![static/img/prismaenterprise - int_screeningpackageservice.png](<../../../../../static/img/prismaenterprise - int_screeningpackageservice.png>)
 
-## Key Tables and Their Purpose
+<!-- ## Key Tables and Their Purpose
 
 ### Screening Request (`int_screeningrequest`)
 
@@ -60,4 +60,4 @@ This diagram focuses on the publication and management of screening reports with
 3. **Event Logging**:
    - Every action related to the report's publication is logged in the `int_screeningpublisheventhistory` table. For example, if an error occurs during publication, it is recorded along with the date and the user who performed the action.
 
-"""
+""" -->

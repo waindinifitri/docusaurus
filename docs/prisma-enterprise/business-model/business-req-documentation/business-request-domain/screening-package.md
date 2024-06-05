@@ -4,60 +4,105 @@ This diagram focuses on the publication and management of screening reports with
 
 ![static/img/prismaenterprise - int_screeningpackageservice.png](<../../../../../static/img/prismaenterprise - int_screeningpackageservice.png>)
 
-<!-- ## Key Tables and Their Purpose
+# Explanation of the Entity-Relationship Diagram for Screening Package Services in the Screening Industry
 
-### Screening Request (`int_screeningrequest`)
+This diagram shows how various components related to screening package services are managed within a screening company's database. It highlights how different aspects of screening services, checks, and packages are interconnected and how they support the overall screening process.
 
-- **Purpose**: This table holds information about all screening requests received by the company.
-- **Key Details**:
-  - Subject being screened (e.g., an individual or entity)
-  - Important dates (requested, starting, due, and finish dates)
-  - Related organizational and contractual information
-  - Current status and workflow details
+## Key Tables and Their Purpose
 
-### Screening Publish Report (`int_screeningpublishreport`)
+1. **Screening Request (`int_screeningrequest`)**
 
-- **Purpose**: This table stores the details of the reports generated from the screening requests.
-- **Key Details**:
-  - HTML content of the report
-  - Dates of creation and publication
-  - Version and state of the report
-  - Related screening request ID (linking back to `int_screeningrequest`)
+   - **Purpose**: Records details of each screening request made.
+   - **Key Details**:
+     - Information about the subject being screened (type, full name, entity ID).
+     - Important dates (requested, starting, due, and finish dates).
+     - Workflow and status information related to the request.
 
-### Screening Publish Event History (`int_screeningpublisheventhistory`)
+2. **Screening Package Service (`int_screeningpackageservice`)**
 
-- **Purpose**: This table logs events related to the publication of screening reports.
-- **Key Details**:
-  - Date and time of the event
-  - Any error messages encountered
-  - Actor ID (who performed the action)
-  - Type of action performed (e.g., report generated, report published)
+   - **Purpose**: Details about the specific screening services offered as part of a package.
+   - **Key Details**:
+     - Service name, data retention policy, and type of check involved.
+     - Links to the base package it belongs to and other related attributes.
+
+3. **Atomic Check (`int_atomiccheck`)**
+
+   - **Purpose**: Records individual checks that are part of a screening request.
+   - **Key Details**:
+     - Title and summary of the check, qualification status, and results.
+     - Related dates and associated workflow information.
+
+4. **Tolerance Matrix Screening Service (`int_tolerancematrixscreeningservice`)**
+
+   - **Purpose**: Defines the tolerance levels and status labels for screening services.
+   - **Key Details**:
+     - Status labels, colors, descriptions, and the type of check they apply to.
+
+5. **Type of Check Base (`int_typeofcheckbase`)**
+
+   - **Purpose**: Defines the types of checks that can be performed.
+   - **Key Details**:
+     - Name and description of the check, whether qualification is required, and active status.
+
+6. **Screening Package Base (`int_screeningpackagebase`)**
+
+   - **Purpose**: Stores base information about screening packages.
+   - **Key Details**:
+     - Package name, type, retention measurements, and subject type.
+
+7. **Screening Package Service Methodology (`int_screeningpackageservicemethodology`)**
+
+   - **Purpose**: Defines the methodology and rules associated with a screening package service.
+   - **Key Details**:
+     - Methodology value and associated rule template ID.
+
+8. **Screening Package Services SLA (`int_screeningpackageservicesla`)**
+   - **Purpose**: Defines the Service Level Agreements (SLA) for screening package services.
+   - **Key Details**:
+     - SLA days and package service ID.
 
 ## How They Work Together
 
-### Creating a Screening Request
+### Collecting and Managing Screening Information
 
-- A new screening request is logged in the `int_screeningrequest` table. This entry includes all necessary information about the subject to be screened, important dates, and related organizational details.
+- **Screening Request**: Initiates the process by recording all necessary details about the subject and the request itself. This table connects to many others to pull in details needed for the screening.
+- **Atomic Check**: Each screening request includes multiple atomic checks that detail individual assessments done as part of the screening process.
 
-### Generating and Publishing Reports
+### Defining Screening Services and Packages
 
-- Once the screening process is complete, a report is generated. This report's details are stored in the `int_screeningpublishreport` table. The `int_screeningpublishreport` table records information such as the HTML content of the report, creation and publication dates, and the associated screening request ID.
+- **Screening Package Service**: Provides detailed information about the specific services offered, including what data is retained and the type of checks involved.
+- **Screening Package Base**: Offers overarching details about the screening packages available, linking to the services they include.
 
-### Tracking Events
+### Managing Tolerances and Methodologies
 
-- Events related to the report's publication are logged in the `int_screeningpublisheventhistory` table. This includes details like when the report was published, any errors that occurred, and the actions taken by users.
+- **Tolerance Matrix Screening Service**: Defines acceptable tolerance levels and statuses for the screening services, ensuring that each check is assessed consistently.
+- **Screening Package Service Methodology**: Lays out the methodologies and rules that guide how each screening service should be performed.
+
+### Ensuring Service Levels
+
+- **Screening Package Services SLA**: Establishes SLAs to ensure that the screening services are delivered within agreed time frames.
 
 ## Practical Example
 
-1. **Request Submission**:
+1. **Initiating a Screening Request**:
 
-   - A client submits a request for a background check on a new employee. This request is recorded in the `int_screeningrequest` table, capturing details about the subject, relevant dates, and the organization requesting the check.
+   - A company requests a screening for an individual.
+   - The details are recorded in the `int_screeningrequest` table, which includes information about the subject and the necessary dates.
 
-2. **Report Generation**:
+2. **Performing Checks**:
 
-   - After completing the background check, a report is generated and its details are stored in the `int_screeningpublishreport` table. This includes the content of the report, when it was created, and when it was published.
+   - As part of the request, multiple `int_atomiccheck` records are created, each detailing a specific check.
+   - These checks are linked to the screening request and follow the methodologies defined in `int_screeningpackageservicemethodology`.
 
-3. **Event Logging**:
-   - Every action related to the report's publication is logged in the `int_screeningpublisheventhistory` table. For example, if an error occurs during publication, it is recorded along with the date and the user who performed the action.
+3. **Assessing Results**:
 
-""" -->
+   - The results of each check are assessed against the tolerances defined in `int_tolerancematrixscreeningservice`.
+   - The status and workflow of the request are updated accordingly.
+
+4. **Managing Services and SLAs**:
+   - The services included in the screening package are detailed in the `int_screeningpackageservice` table.
+   - SLAs defined in `int_screeningpackageservicesla` ensure that the checks are completed within the agreed time frame.
+
+## Summary
+
+In the context of the screening industry, this entity-relationship diagram illustrates how a screening company organizes and manages its screening services and packages. It ensures that all aspects of the screening process, from the initial request to the final assessment, are efficiently handled and that services are delivered as promised.

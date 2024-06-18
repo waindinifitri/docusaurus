@@ -2,7 +2,7 @@
 
 The draft of sales contract, from EBS and non EBS flow:
 
-![alt text](../../../../static/img/sales_contract.png)
+![alt text](../../../../static/img/sales_contract3.png)
 
 need to verify :
 

@@ -6,8 +6,6 @@ This diagram focuses on the publication and management of screening reports with
 
 # Screening Package Contract Entity
 
-## Overview
-
 The Screening Package Contract entity captures details about the contractual agreements between a screening company and its clients regarding screening packages.
 
 ## Purpose

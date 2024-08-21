@@ -9,118 +9,87 @@ need to verify :
 1. is it make sense to do this flow at the operation and how to efficience the flow for the stakeholder (both EBS and non EBS)
 2. ...
 
-# Sales and Contract Process Flow
+# Creating the markdown content for the sales contract process flow
 
-## 1. Potential Client Initiates Contact
+markdown_content = """
 
-- The process begins when a potential client expresses interest, often coming from a marketplace or inquiry.
+## Sales Contract Process Flow
 
-## 2. Create Basic/Temporary Account
+This document describes the step-by-step process of our sales contract workflow. This process ensures that potential clients are managed efficiently from initial contact through to the completion of their contracts and service activation.
 
-- An account is created for the client, which could be a basic or temporary one to get things started.
+### 1. Potential Client Identification
 
-## 3. Send Email Notification
+- **Potential Client from Marketplace**: The process begins when a potential client is identified from the marketplace.
 
-- An email is sent to the relevant teams (Admin, Sales, and the potential client) informing them of the new account setup.
+### 2. Account Creation
 
-## 4. Create Task for Sales Verification
+- **Create Basic/Temporary Account**: A basic or temporary account is created for the potential client.
 
-- A task is created for the Sales team to verify the client's account.
+### 3. Initial Communication
 
-## 5. Sales Team Verifies Account
+- **Send Email**: An email is sent to inform the System Admin, Sales team, and the potential client about the new account.
 
-- If the client is verified, the process continues.
-- If not, the Sales team manually verifies the step and engages with the client.
+### 4. Verification by Sales Team
 
-## 6. Activate Client Account
+- **Create Task for Sales for Verifying**: A task is created for the Sales team to verify the new account.
+- **IDR Required?**: The system checks if additional identity verification (IDR) is required.
+  - **Yes**: The account verification is done manually by the Sales team.
+  - **No**: The process skips to activating the client account.
 
-- Once verified, the client's account is activated.
+### 5. Activation and Engagement
 
-## 7. Engage by Sales Team
+- **Is Verified?**: The system checks if the account is verified.
+  - **Yes**: The client account is activated.
+  - **No**: The Sales team engages with the potential client to gather necessary information for verification.
 
-- The Sales team engages with the client to understand their needs.
+### 6. Package Selection
 
-## 8. Fetch/Display Basic Package Services
+- **Fetch/Display Basic Package Services**: The available basic package services are fetched and displayed to the client.
+- **Is Purchase Indicator?**: The system checks if the client has selected a package.
+  - **Yes**: An email is sent to the Sales team indicating the package selection.
+  - **No**: The Sales team engages with the client to assist with package selection.
 
-- Basic package services are fetched and displayed to the client.
+### 7. Contract Creation
 
-## 9. Client Decision on Purchase
+- **Create Package Contract**: A package contract is created based on the client's selection.
+- **Send Email to Sales and Client**: An email is sent to the Sales team and the client with the contract details.
+- **Get Package Contract**: The client receives the package contract.
+- **Client Complete Agreement**: The client completes the agreement process.
 
-- If the client decides to purchase or order, the process continues.
-- If not, there is an engagement with the Sales team for follow-up.
+### 8. Agreement and Document Handling
 
-## 10. Get Package Contract
+- **Client Review and Download the Agreement**: The client reviews and downloads the agreement.
+- **Review and Sign the Agreement**: The client reviews and signs the agreement.
+- **Upload Supporting Documents**: The client uploads any necessary supporting documents.
+- **Setting Up Internal Name for Client Preferences**: The system sets up an internal name based on the client's preferences.
+- **Send Email to Client**: An email is sent to the client confirming the setup.
+- **Generate Signature Manifest Attribute Form**: A form is generated for the client's signature manifest attributes.
 
-- The client obtains the package contract.
+### 9. Case Management
 
-## 11. Client Completes Agreement
+- **Is Activated?**: The system checks if the contract is activated.
+  - **Yes**: The process continues to case management.
+  - **No**: The client is followed up by the Sales team.
+- **Create Case Brief for Operations Team**: A case brief is created for the Operations team.
+- **Assign Case to Operations Team**: The case is assigned to the Operations team.
+- **Analyze Case**: The Operations team analyzes the case details.
+- **Assign TOC to Analyst**: The Terms of Contract (TOC) is assigned to an analyst.
+- **Is EDD Required?**: The system checks if Extended Due Diligence (EDD) is required.
+  - **Yes**: An EDD screening request is created.
+  - **No**: The process skips to operational follow-up.
 
-- The client completes the agreement and downloads the signed document.
+### 10. Operational Follow-Up
 
-## 12. Review and Sign Agreement
+- **Follow Up with Operations Team**: The Operations team follows up on the case.
+- **Kick Off Meeting with Operations Team**: A kickoff meeting is held with the Operations team.
+- **Report to Client**: The Operations team reports back to the client.
 
-- The agreement is reviewed and signed by the necessary parties.
+### 11. Screening Request (if EDD is required)
 
-## 13. Upload Supporting Documents
-
-- The client uploads the necessary supporting documents.
-
-## 14. Setting Up Tailor-made Service for Client Preferences
-
-- Tailor-made services are set up according to the client's preferences.
-
-## 15. Generate Signature and Attach PDF
-
-- A signature is generated and attached in PDF format, which is then sent to the client.
-
-## 16. Client Follow-up
-
-- The client is followed up to ensure all details are correct and to address any concerns.
-
-## 17. Analyze Case Relevancy
-
-- The case is analyzed to determine its relevance.
-
-## 18. Choose Investigation Officer (IOC)
-
-- An Investigation Officer is chosen.
-
-## 19. Assign IOC
-
-- The chosen Investigation Officer is assigned to the case.
-
-## 20. Create Case Brief for Operations Team
-
-- A brief for the operations team is created and sent.
-
-## 21. Assign Case to Operations Team
-
-- The case is assigned to the operations team.
-
-## 22. Operations Team Kick-off Meeting
-
-- The operations team holds a kick-off meeting to discuss the case.
-
-## 23. Follow Up Operations Team
-
-- The progress of the operations team is followed up.
-
-## 24. Create Screening Request
-
-- A screening request is created.
-
-## 25. Submit Screening Request
-
-- The screening request is submitted.
-
-## 26. Dispatching Atomic Check
-
-- An atomic check is dispatched.
-
-## 27. Atomic Check Report
-
-- The atomic check report is generated.
-
-## 28. Task Work Item
-
-- The final task or work item is executed based on the atomic check report.
+- **Activate Client Account**: The client account is activated.
+- **Create Screening Request**: A screening request is created.
+- **Submit Screening Request**: The screening request is submitted.
+- **Dispatching Atomic Check**: An atomic check is dispatched.
+- **Atomic Check Report**: The results of the atomic check are compiled into a report.
+- **Task Work Item**: The task is completed, and the work item is closed.
+  """
